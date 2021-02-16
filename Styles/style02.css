@@ -18,7 +18,7 @@ footer {
     }
 
     ul li {
-        display: initial;
+        display: inline;
         padding: 5px;
         border: 1px dotted black;
         background: brown;
@@ -26,7 +26,24 @@ footer {
         font-size: 15px;
         font-weight: bold;
         font-family: "Times New Roman";
+    
     }
+
+    ol {
+        
+        font-family: "Times New Roman";
+        list-style-image: url('../Images/vader2.gif');
+    }
+
+    ol li {
+
+        font-size: 17px;
+        font-weight: bold;
+        font-family: "Times New Roman";
+        
+    }
+
+
 
     p{
         font-family: "Times New Roman";

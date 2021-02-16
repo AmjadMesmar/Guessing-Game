@@ -108,20 +108,129 @@ function quizTime(){
     alert('Exactly!, Who isnt !? :D');
   }
 
-  if (count === 5)
-  {
-
-    alert('Congratualtions!, You passed the quiz with a score of: ' + count +'/5.');
-  }
-  else if (count !== 5)
-  {
-
-    alert('I am sorry, You failed the quiz with a score of: ' + count +'/5.');
-  }
-
-  alert('Thanks for your time, '+ fName + '!');
 }
+
+function randomNumber()
+
+{
+  let guessNumber = '55';
+  let guessCount = 4;
+  let rightCount = 1;
+  let inputNumber;
+
+  alert('Please guess the correct number, you have ' + guessCount +' tries!');
+
+  for(let i = 4; i !== 0; i--)
+  {
+    inputNumber = prompt('Please guess the number:');
+
+    if(inputNumber >= 100)
+    {
+      guessCount--;
+      rightCount++;
+      alert('The number is too high! You have ' + guessCount+ ' tries remaining!');
+      console.log('Too high input');
+      console.log('Tries remaining:' + guessCount);
+    }
+
+    else if(inputNumber <= 10)
+    {
+      guessCount--;
+      rightCount++;
+      alert('The number is too low! You have ' + guessCount + ' tries remaining!');
+      console.log('Too low input');
+      console.log('Tries remaining:' + guessCount);
+    }
+
+    else if(inputNumber === guessNumber)
+    {
+      alert('The number is correct! You have done it,  ' + fName + ', great job!');
+      alert('You found the correct number with ' + rightCount + ' tries!');
+      console.log('Correct input');
+      count++;
+      console.log('Correct answers:' + count);
+      break;
+    }
+
+    else if(inputNumber >= 30 && inputNumber <=70)
+    {
+      guessCount--;
+      rightCount++;
+      alert('Its getting warm, you are getting close, you have ' + guessCount + ' tries remaining!');
+      console.log('Warm input');
+    }
+
+    else
+    {
+      guessCount--;
+      alert('The number is incorrect! You have ' + guessCount + ' tries remaining!');
+      console.log('Incorrect input');
+      console.log('Tries remaining:' + guessCount);
+    }
+
+  }
+  if(guessCount === 0)
+  {
+    alert('You could not guess the number, it was ' + guessNumber + ', better luck next time, ' + fName + '!');
+  }
+}
+
+
+function arrayQuestion()
+
+{
+  let myArray = [5,13,19];
+  let inputNumber;
+  let guessArrayTries = 6;
+  let rightCount = 1;
+
+  alert('Please guess one of the correct numbers betwee 0-20, you have ' + guessArrayTries +' tries!');
+
+  for(let i = 6; i !== 0; i--)
+  {
+    inputNumber = Number(prompt('Please guess the numbers:'));
+
+
+    if(inputNumber === myArray[0] || inputNumber === myArray[1] || inputNumber === myArray[2] )
+    {
+      alert('This is a correct number! You have done it,  ' + fName + ', great job!');
+      alert('You found the correct number with ' + rightCount + ' tries!');
+      console.log('Correct input');
+      count++;
+      console.log('Correct answers:' + count);
+      break;
+    }
+
+    else
+    {
+      guessArrayTries--;
+      rightCount++;
+      alert('The number is incorrect, ' + guessArrayTries + ' tries remaining!');
+      console.log('Wrong input');
+      console.log('Tries remaining:' + guessArrayTries);
+    }
+  }
+  if(guessArrayTries === 0)
+  {
+    alert('You could not guess any of the numbers, the numbers were  (' + myArray + '), better luck next time, ' + fName + '!');
+  }
+}
+
 
 userName();
 quizTime();
+randomNumber();
+arrayQuestion();
 
+if (count === 7)
+{
+
+  alert('Congratualtions!, You passed the quiz with a score of: ' + count +'/7.');
+}
+else if (count !== 7)
+{
+
+  alert('I am sorry, You failed the quiz with a score of: ' + count +'/7.');
+}
+
+alert('Thanks for your time, '+ fName + '!');
