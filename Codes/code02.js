@@ -105,13 +105,13 @@ function randomNumber() {
   for (let i = 4; i !== 0; i--) {
     inputNumber = prompt('Please guess the number:');
 
-    if (inputNumber >= 100) {
+    if (inputNumber >= 85) {
       guessCount--;
       rightCount++;
       alert('The number is too high! You have ' + guessCount + ' tries remaining!');
     }
 
-    else if (inputNumber <= 10) {
+    else if (inputNumber <= 15) {
       guessCount--;
       rightCount++;
       alert('The number is too low! You have ' + guessCount + ' tries remaining!');
