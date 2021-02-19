@@ -14,7 +14,6 @@ function userName() {
   while ((firstName === null) || (firstName === '')) {
     firstName = prompt('Whats your name?');
   }
-  console.log('Hello ' + firstName + '!');
   alert('Hello ' + firstName + '!, Hope you are doing great today!');
 }
 
@@ -27,13 +26,10 @@ const age = function () {
     myAge = prompt('Am I am 25 years old?').toLowerCase();
   }
   if ((myAge === 'yes') || (myAge === 'y')) {
-    console.log('Wrong answer, age.');
     alert('Wrong!, I am 29 years old. =]');
   }
   else if ((myAge === 'no') || (myAge === 'n')) {
-    console.log('Correct answer, age.');
     count++;
-    console.log('Correct answers:' + count);
     alert('Correct!');
   }
 
@@ -47,13 +43,10 @@ const pet = function () {
     myPets = prompt('Do I have pets?').toLowerCase();
   }
   if ((myPets === 'no') || (myPets === 'n')) {
-    console.log('Wrong answer, pets.');
     alert('Wrong!, I have 2 beautiful cats! =3');
   }
   else if ((myPets === 'yes') || (myPets === 'y')) {
-    console.log('Correct answer, pets.');
     count++;
-    console.log('Correct answers:' + count);
     alert('You are correct!');
   }
 };
@@ -64,13 +57,10 @@ const city = function () {
     myCity = prompt('Do I live in Amman').toLowerCase();
   }
   if ((myCity === 'yes') || (myCity === 'y')) {
-    console.log('Wrong answer, city.');
     alert('Wrong!, I live in the lovely city of Irbid ^_^');
   }
   else if ((myCity === 'no') || (myCity === 'n')) {
-    console.log('Correct answer, city.');
     count++;
-    console.log('Correct answers:' + count);
     alert('You got that right!');
   }
 };
@@ -81,13 +71,10 @@ const edu = function () {
     myEdu = prompt('Do I have a Master degree?').toLowerCase();
   }
   if ((myEdu === 'yes') || (myEdu === 'y')) {
-    console.log('Wrong answer, education.');
     alert('You are mistaken, I only have a bachelor degree! :P');
   }
   else if ((myEdu === 'no') || (myEdu === 'n')) {
-    console.log('Correct answer, education.');
     count++;
-    console.log('Correct answers:' + count);
     alert('Correct!, I have only Bachelor degree!');
   }
 };
@@ -98,13 +85,10 @@ const addiction = function () {
     myAddiction = prompt('Am I addicted to YouTube?').toLowerCase();
   }
   if ((myAddiction === 'no') || (myAddiction === 'n')) {
-    console.log('Wrong answer, addiction.');
     alert('Thats a huge mistake! YouTube is my honey and jam! :3');
   }
   else if ((myAddiction === 'yes') || (myAddiction === 'y')) {
-    console.log('Correct answer, addiction.');
     count++;
-    console.log('Correct answers:' + count);
     alert('Exactly!, Who isnt !? :D');
   }
 };
@@ -116,7 +100,7 @@ function randomNumber() {
   let rightCount = 1;
   let inputNumber;
 
-  alert('Please guess the correct number, you have ' + guessCount + ' tries!');
+  alert('Please guess the correct number between 0-100, you have ' + guessCount + ' tries!');
 
   for (let i = 4; i !== 0; i--) {
     inputNumber = prompt('Please guess the number:');
@@ -125,39 +109,30 @@ function randomNumber() {
       guessCount--;
       rightCount++;
       alert('The number is too high! You have ' + guessCount + ' tries remaining!');
-      console.log('Too high input');
-      console.log('Tries remaining:' + guessCount);
     }
 
     else if (inputNumber <= 10) {
       guessCount--;
       rightCount++;
       alert('The number is too low! You have ' + guessCount + ' tries remaining!');
-      console.log('Too low input');
-      console.log('Tries remaining:' + guessCount);
     }
 
     else if (inputNumber === guessNumber) {
       alert('The number is correct! You have done it,  ' + firstName + ', great job!');
       alert('You found the correct number with ' + rightCount + ' tries!');
-      console.log('Correct input');
       count++;
-      console.log('Correct answers:' + count);
       break;
     }
 
-    else if (inputNumber >= 30 && inputNumber <= 70) {
+    else if (inputNumber >= 45 && inputNumber <= 60) {
       guessCount--;
       rightCount++;
       alert('Its getting warm, you are getting close, you have ' + guessCount + ' tries remaining!');
-      console.log('Warm input');
     }
 
     else {
       guessCount--;
       alert('The number is incorrect! You have ' + guessCount + ' tries remaining!');
-      console.log('Incorrect input');
-      console.log('Tries remaining:' + guessCount);
     }
 
   }
@@ -182,9 +157,7 @@ function arrayQuestion() {
     if (inputNumber === myArray[0] || inputNumber === myArray[1] || inputNumber === myArray[2]) {
       alert('This is a correct number! You have done it,  ' + firstName + ', great job!');
       alert('You found the correct number with ' + rightCount + ' tries!');
-      console.log('Correct input');
       count++;
-      console.log('Correct answers:' + count);
       break;
     }
 
@@ -192,8 +165,6 @@ function arrayQuestion() {
       guessArrayTries--;
       rightCount++;
       alert('The number is incorrect, ' + guessArrayTries + ' tries remaining!');
-      console.log('Wrong input');
-      console.log('Tries remaining:' + guessArrayTries);
     }
   }
   if (guessArrayTries === 0) {
